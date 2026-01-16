@@ -7,8 +7,8 @@ const ContactSubmissions: CollectionConfig = {
     defaultColumns: ['name', 'email', 'createdAt'],
   },
   access: {
-    create: () => true, // Allow public form submissions
-    read: ({ req: { user } }) => !!user, // Only admin can read
+    create: () => true,
+    read: ({ req: { user } }) => !!user,
   },
   fields: [
     {

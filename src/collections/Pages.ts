@@ -10,7 +10,7 @@ const Pages: CollectionConfig = {
     drafts: true,
   },
   access: {
-    read: () => true, // Public access for frontend
+    read: () => true,
   },
   fields: [
     {
