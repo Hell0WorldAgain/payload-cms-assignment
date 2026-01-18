@@ -23,7 +23,6 @@ const Pages: CollectionConfig = {
       name: 'slug',
       type: 'text',
       required: true,
-      unique: true,
       admin: {
         description: 'URL-friendly identifier (e.g., "home", "contact")',
       },
@@ -62,7 +61,7 @@ const Pages: CollectionConfig = {
     {
       name: 'contentBlocks',
       type: 'blocks',
-      required: true,
+      required: false,
       blocks: [
         {
           slug: 'hero',

@@ -1,5 +1,7 @@
 import { withPayload } from '@payloadcms/next/withPayload'
 
+process.env.PAYLOAD_CONFIG_PATH = 'src/payload.config.ts'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack: (webpackConfig) => {
@@ -13,4 +15,6 @@ const nextConfig = {
   },
 }
 
-export default withPayload(nextConfig, { devBundleServerPackages: false })
+export default withPayload(nextConfig, {
+  devBundleServerPackages: false,
+})

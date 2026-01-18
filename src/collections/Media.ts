@@ -1,33 +1,14 @@
-import { CollectionConfig } from 'payload';
+import type { CollectionConfig } from 'payload'
+import path from 'path'
 
 const Media: CollectionConfig = {
   slug: 'media',
   upload: {
-    staticDir: 'media',
-    imageSizes: [
-      {
-        name: 'thumbnail',
-        width: 400,
-        height: 300,
-        position: 'centre',
-      },
-      {
-        name: 'card',
-        width: 768,
-        height: 1024,
-        position: 'centre',
-      },
-      {
-        name: 'tablet',
-        width: 1024,
-        position: 'centre',
-      },
-    ],
-    adminThumbnail: 'thumbnail',
+    staticDir: path.resolve(__dirname, '../../media'), // Important: correct path
     mimeTypes: ['image/*'],
   },
   access: {
-    read: () => true,
+    read: () => true, // Public read access
   },
   fields: [
     {
@@ -36,6 +17,6 @@ const Media: CollectionConfig = {
       required: true,
     },
   ],
-};
+}
 
-export default Media;
+export default Media

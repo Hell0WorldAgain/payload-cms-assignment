@@ -12,7 +12,7 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <main>{children}</main>
+        <main suppressHydrationWarning>{children}</main>
       </body>
     </html>
   )
